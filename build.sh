@@ -5,7 +5,7 @@ REPO_PATH=$GOPATH/src/github.com/grafana/grafana
 
 cd $REPO_PATH
 
-go run build.go build
+go run build.go -includeBuildNumber=false build
 npm install -g yarn
 yarn install
 
@@ -14,4 +14,4 @@ rvm use 2.1.9 --default
 
 gem install fpm -v 1.4
 
-go run build.go package latest
+go run build.go -includeBuildNumber=false package
